@@ -28,7 +28,14 @@ def anagrams(words: list = None) -> bool:
 
 
 def contains_doubles(items: list) -> bool:
-    return False
+    for i in items:
+        i = str(i)
+      if len(i)>1:
+        print('false')
+        break
+      else:
+        print('true')
+    
 
 
 def best_grades(student_grades: dict) -> dict:
