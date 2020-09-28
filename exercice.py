@@ -28,19 +28,24 @@ def anagrams(words: list = None) -> bool:
 
 
 def contains_doubles(items: list) -> bool:
-    for i in items:
-        i = str(i)
-      if len(i)>1:
-        print('false')
-        break
-      else:
-        print('true')
-    
+    uniques = set(items)
+    return len(items) == len(uniques) 
 
 
 def best_grades(student_grades: dict) -> dict:
-    # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
-    return {}
+    
+
+S = 0
+for i in student_grades : 
+  S = student_grades[i] + S
+Moyenne = S/(len(student_grades))
+print(f"La moyenne est de {Moyenne}")
+note_max = 0
+for j in student_grades : 
+          
+  if student_grades[j] > note_max:
+    note_max = student_grades[j]
+print(f"Meilleur note est de {note_max}")
 
 
 def histogram(sentence: str) -> tuple:
