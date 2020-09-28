@@ -4,18 +4,27 @@
 
 def order(values: list = None) -> bool:
     if values is None:
-        # TODO: Demander les valeurs ici
-        pass
+        value = [input("Entrez un nombre : ") for n in range(10)]
+   
 
-    return False
+    return value == sorted(values)
+
+
 
 
 def anagrams(words: list = None) -> bool:
     if words is None:
-        # TODO: Demander les mots ici
-        pass
-
-    return False
+        words = [input("Entrez deux mots : ") for n in range(2)]
+        first_word = sorted(words[0])
+        second_word = sorted(words[1])
+        
+        if first_word == second_word:
+            return True
+        else :
+            return False
+        
+      
+ 
 
 
 def contains_doubles(items: list) -> bool:
